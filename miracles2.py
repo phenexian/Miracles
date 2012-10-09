@@ -144,36 +144,38 @@ def printnice(string):
 
 stuff=["fire", "ice", "wood", "granite", "obsidian", "fresh water", "seawater", "blood", "meat", "air", "ash", "glass", "bone", "iron", "bronze",
        "steel", "silver", "gold", "sand", "flesh", "gelatinous ooze", "corrosive acid", "bile", "limestone", "dust", "smoke", "poisonous gas",
-       "paper", "mud", "cloth", "lava", "hair","honey"]
-liquid=["fresh water", "seawater", "blood", "gelatinous ooze", "bile", "sand", "corrosive acid", "mud", "lava", "honey"]
-gas=["air","fire","smoke", "dust", "poisonous gas"]
-shapes=["sphere", "square", "blob", "ring", "collumn", "cage", "wall", "dome"]
-vesels=["lungs", "pots","waterskins", "glasses", "cracks", "scabbards", "cups"]
-radiation=["moonlight", "sunlight", "fire-light", "light", "darkness", "lightning","unnatural gravitation"]
+       "paper", "mud", "cloth", "lava", "hair","honey","stone", "ivory", "corrosive fumes", "leaves", "cheese", "wax", "crystal", "lace", "plasma",
+       "tea", "porridge", "sandstone", "gem stone", "mist", "mercury", "titanium", "aluminium", "platinum", "mould", "diamond", "alcohol", "chitin", "feathers"]
+liquid=["fresh water", "seawater", "blood", "gelatinous ooze", "bile", "sand", "corrosive acid", "mud", "lava", "honey", "leaves", "tea", "porridge", "mercury", "feathers"]
+gas=["air","fire","smoke", "dust", "poisonous gas", "corrosive fumes", "plasma", "mist"]
+shapes=["sphere", "square", "blob", "ring", "collumn", "cage", "wall", "dome", "shard", "pyramid"]
+vesels=["lungs", "pots","waterskins", "glasses", "cracks", "scabbards", "cups", "teapots", "flasks", "barrels", "bowls", "chests", "cupboards", "quivers", "helmets", "armour"]
+radiation=["moonlight", "sunlight", "torchlight", "light", "darkness", "lightning","unnatural gravitation", "starlight", "wind"]
 feelings=["rage", "lust", "calm", "confusion", "fear", "courage", "love", "regret", "amnesia"]
 minds=["sentient", "non-sentient", ""]
-magnitude=["puny", "slight", "minor", "average", "significant", "strong", "powerful", "extreme", "unbelieveable"]
-bodies=["bird", "humanoid", "serpent", "gorilla", "horse", "centaur", "dragon", "ant", "butterfly", "beetle", "bear", "wolf","boar","squid","angel","turtle","cat","fish","shark","lizard","tortoise","pachyderm of the caster's preference", "being inconceivable to the human mind"]
+magnitude=["slight", "minor", "average", "significant", "strong", "powerful", "extreme", "unbelieveable"]
+bodies=["bird", "humanoid", "serpent", "ape", "horse", "centaur", "dragon", "ant", "butterfly", "beetle", "bear", "wolf","boar","squid","angel","turtle","cat","fish","shark","lizard","tortoise",
+        "pachyderm of the caster's preference", "being inconceivable to the human mind", "frog", "sauropod", "theropod", "dragonfly", "bat", "pterosaur"]
 transrules=["They turn back when the creatures body dies.", "They turn back after "+str(randomag()+5)+" minutes.", "They never turn back.",
-            "They can turn back at will."]
-threats=["kinetic impacts", "high temperatures", "low temperatures", "poison", "acid", "starvation", "thirst", "disease", "intentional attacks", "bad luck", "anything"]
+            "They can turn back at will.", ,"They turn back when "+random.choice(["exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at"])+"."]
 types=["allies", "enemies", "humans", "humanoids", "animals", "summoned beings", "humans and anmials","undead beings","animated objects"]
 directions=["in all directions", "away from the caster(or object)", "towards the caster (or object)", "upwards", "downwards"]
-boosts=["strength", "speed", "stamina", "inteligence", "perceptiveness","coordination"]
+boosts=["strength", "speed", "stamina", "inteligence", "perceptiveness","coordination","eloquence","resolve"]
 props=[["melting point","degrees"],["boiling point","degrees"],["strength","percent"],["weight","percent"],["reflectivity","percent"]]
-bodypts=["a pair of arms","a pair of legs","a pair of wings","a bunch of tentacles","a pair of horns","a pair of mandibles","a scorpion tail","a tail", "a pair of insectile wings", "antlers", "claws"]
+bodypts=["a pair of arms","a pair of legs","a pair of wings","a bunch of tentacles","a pair of horns","a pair of mandibles","a scorpion tail","a tail", "a pair of insectile wings", "antlers", "claws","fangs","fins","an additional head","a shell","a set of pincers","scythe like claws"]
 objects=["A chosen object", "The biggest object", "The most valuable object", "The object the caster is looking at"]
 timescales=["decades", "years","months","weeks", "days", "hours", "minutes", "seconds"]
-colours=["white","black","grey","red","blue","yellow","green","purple","orange","magenta","pink","cyan","turquise","gold-coloured","silver-coloured","transarent","invisible"]
-triggers=["destroyed", "brandished", "exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at",
+colours=["white","black","grey","red","blue","yellow","green","purple","orange","magenta","pink","cyan","turquise","brown","gold-coloured","silver-coloured","transarent","invisible"]
+triggers=["destroyed", "brandished", "exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at", "polished"
           "intentionally used by anyone holding it", "intentionally used by its crerator holding it", "touched by a "+random.choice(colours)+" object"]
-things=["sword","spear","axe","dagger","arrow","bow","cup","orb","teapot","flower","rake","spade","wig","hat","belt",
-        "ring","crown","shoe","glove","fruit","fork","vegetable","table","helmet","book","carpet","key","pot","scabbard",
-        "waterskin","bowl","torch","lamp","rope","boulder","pitchfork","cloak","bird", "human","serpent","gorilla","horse","centaur",
-        "dragon","ant","butterfly","beetle","bear", "wolf","boar","squid","angel","turtle","cat","fish","shark","lizard","tortoise",
-        "pachyderm of the caster's preference"]
-livingthings=["bird", "human","serpent","gorilla","horse","centaur","dragon","ant","butterfly","beetle","bear", "wolf","boar","squid"
-              ,"angel","turtle","cat","fish","shark","lizard","tortoise","pachyderm of the caster's preference"]
+things=["sword","spear","axe","dagger","arrow","bow","cross-bow","firearm","mace","lance","weapon","hilt","cup","orb","teapot","flask","flower","rake","spade","knife","wig","hat","belt",
+        "ring","crown","shoe","glove","fruit","fork","vegetable","table","helmet","book","carpet","key","pot","scabbard","quiver"
+        "waterskin","bowl","torch","lamp","candle","rope","boulder","pitchfork","cloak","belt","bird","human","serpent","ape","horse","centaur",
+        "dragon","ant","butterfly","beetle","bear", "wolf", "dog","boar","squid","angel","turtle","cat","fish","shark","lizard","tortoise",
+        "bat", "insect","frog","pachyderm"]
+livingthings=["bird", "human","serpent","ape","horse","centaur","dragon","ant","butterfly","beetle","bear","wolf","dog","boar","squid"
+              ,"angel","turtle","cat","fish","shark","lizard","tortoise","pachyderm","bat","insect","frog"]
+threats=["kinetic impacts", "high temperatures", "low temperatures", "poison", "acid", "starvation", "thirst", "disease", "intentional attacks", "bad luck", "anything", random.choice(things), random.choice(stuff)]
 ailments=[random.choice(colours)+" boils", random.choice(colours)+" rashes", "vomiting", "diarrhea","victims' teeth to fall out","headaches","disoreintation","exhaustion",
           "hair loss", "infertility", "pregnancy","coughing"]
 spells=["create", "transfigure", "fill", "emotion", "summon", "transform", "protect", "radiate", "necro", "hyperspell",
