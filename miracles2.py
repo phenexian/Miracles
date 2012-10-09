@@ -165,6 +165,7 @@ props=[["melting point","degrees"],["boiling point","degrees"],["strength","perc
 bodypts=["a pair of arms","a pair of legs","a pair of wings","a bunch of tentacles","a pair of horns","a pair of mandibles","a scorpion tail","a tail", "a pair of insectile wings", "antlers", "claws","fangs","fins","an additional head","a shell","a set of pincers","scythe like claws"]
 objects=["A chosen object", "The biggest object", "The most valuable object", "The object the caster is looking at"]
 timescales=["decades", "years","months","weeks", "days", "hours", "minutes", "seconds"]
+sounds=["a deafening boom","an ear splitting scream","the sound of thunder","a mighty roar","a painful screeching sound","an eerie tune","melodic music","a loud pop","a thousand singing choral voices","a pervasive silence","an unearthly sound","a brief whooshing sound","the sound of keys scraping on piano wire"]
 colours=["white","black","grey","red","blue","yellow","green","purple","orange","magenta","pink","cyan","turquise","brown","gold-coloured","silver-coloured","transarent","invisible"]
 triggers=["destroyed", "brandished", "exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at", "polished"
           "intentionally used by anyone holding it", "intentionally used by its crerator holding it", "touched by a "+random.choice(colours)+" object"]
@@ -792,7 +793,7 @@ def flash(power,source):
 
     a=random.random()
     if a>0.5:
-        ans=ans+" and a noise of "+random.choice(magnitude)+" volume."
+        ans=ans+" and "+random.choice(sounds)+"."
     else:
         ans=ans+"."
 
