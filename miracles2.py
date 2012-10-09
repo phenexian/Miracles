@@ -157,7 +157,7 @@ magnitude=["slight", "minor", "average", "significant", "strong", "powerful", "e
 bodies=["bird", "humanoid", "serpent", "ape", "horse", "centaur", "dragon", "ant", "butterfly", "beetle", "bear", "wolf","boar","squid","angel","turtle","cat","fish","shark","lizard","tortoise",
         "pachyderm of the caster's preference", "being inconceivable to the human mind", "frog", "sauropod", "theropod", "dragonfly", "bat", "pterosaur"]
 transrules=["They turn back when the creatures body dies.", "They turn back after "+str(randomag()+5)+" minutes.", "They never turn back.",
-            "They can turn back at will.", ,"They turn back when "+random.choice(["exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at"])+"."]
+            "They can turn back at will.", "They turn back when "+random.choice(["exposed to "+random.choice(radiation), "touched by "+random.choice(stuff),"looked at"])+"."]
 types=["allies", "enemies", "humans", "humanoids", "animals", "summoned beings", "humans and anmials","undead beings","animated objects"]
 directions=["in all directions", "away from the caster(or object)", "towards the caster (or object)", "upwards", "downwards"]
 boosts=["strength", "speed", "stamina", "inteligence", "perceptiveness","coordination","eloquence","resolve"]
