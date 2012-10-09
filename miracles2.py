@@ -788,7 +788,7 @@ def hyperspell(power,source):
 def flash(power,source):
     spell=random.choice(spells)
     exec("ans="+spell+"(power, source)")
-    ans=ans+"\nThis miracles activation is occompanied by a "+random.choice(magnitude)+" flash of "+random.choice(colours)+" light"
+    ans=ans+"\nThis miracles activation is occompanied by a "+random.choice(magnitude)+random.choice([" flash of "+random.choice(colours)+" light"," blast of wind"," swirling "+random.choice(colours)+" aura."," discharge of "+random.choice(colours)+" sparks."])
 
     a=random.random()
     if a>0.5:
